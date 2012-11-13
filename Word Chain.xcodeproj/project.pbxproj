@@ -25,6 +25,7 @@
 		EF22FCA1164CC6C40023210E /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF22FCA0164CC6C40023210E /* second@2x.png */; };
 		EF22FCA8164CD3C30023210E /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = EF22FCA7164CD3C30023210E /* words.txt */; };
 		EF22FCAA164CD99D0023210E /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF22FCA9164CD99D0023210E /* GameKit.framework */; };
+		EF8AD9041652308A005681A8 /* ChainHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8AD9031652308A005681A8 /* ChainHolder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,8 @@
 		EF22FCA0164CC6C40023210E /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		EF22FCA7164CD3C30023210E /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 		EF22FCA9164CD99D0023210E /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		EF8AD9021652308A005681A8 /* ChainHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainHolder.h; sourceTree = "<group>"; };
+		EF8AD9031652308A005681A8 /* ChainHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChainHolder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +106,10 @@
 				EF22FC88164CC6C40023210E /* AppDelegate.h */,
 				EF22FC89164CC6C40023210E /* AppDelegate.m */,
 				EF22FC91164CC6C40023210E /* MainStoryboard.storyboard */,
-				EF22FC94164CC6C40023210E /* FirstViewController.h */,
-				EF22FC95164CC6C40023210E /* FirstViewController.m */,
+				EF8AD8FC1652297D005681A8 /* Controllers */,
+				EF8AD8FE1652299E005681A8 /* Models */,
 				EF22FC97164CC6C40023210E /* first.png */,
 				EF22FC99164CC6C40023210E /* first@2x.png */,
-				EF22FC9B164CC6C40023210E /* SecondViewController.h */,
-				EF22FC9C164CC6C40023210E /* SecondViewController.m */,
 				EF22FC9E164CC6C40023210E /* second.png */,
 				EF22FCA0164CC6C40023210E /* second@2x.png */,
 				EF22FC80164CC6C40023210E /* Supporting Files */,
@@ -129,6 +130,26 @@
 				EF22FC8F164CC6C40023210E /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF8AD8FC1652297D005681A8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF22FC94164CC6C40023210E /* FirstViewController.h */,
+				EF22FC95164CC6C40023210E /* FirstViewController.m */,
+				EF22FC9B164CC6C40023210E /* SecondViewController.h */,
+				EF22FC9C164CC6C40023210E /* SecondViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		EF8AD8FE1652299E005681A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EF8AD9021652308A005681A8 /* ChainHolder.h */,
+				EF8AD9031652308A005681A8 /* ChainHolder.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +227,7 @@
 				EF22FC8A164CC6C40023210E /* AppDelegate.m in Sources */,
 				EF22FC96164CC6C40023210E /* FirstViewController.m in Sources */,
 				EF22FC9D164CC6C40023210E /* SecondViewController.m in Sources */,
+				EF8AD9041652308A005681A8 /* ChainHolder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +344,7 @@
 				EF22FCA6164CC6C40023210E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

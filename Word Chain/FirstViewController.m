@@ -19,6 +19,7 @@
     [super viewDidLoad];
 
     self.responseField.delegate = self;
+    self.chainHolder = [[ChainHolder alloc] init];
     
     self.picker = [[GKPeerPickerController alloc] init]; 
     self.picker.delegate = self;
@@ -42,8 +43,8 @@
    
     if ([self.actionButton.titleLabel.text isEqualToString:@"Start"]) {
         int number = rand() % [self.strings count];
-        self.root = (NSString*)[self.strings objectAtIndex:number];
-        self.displayLabel.text = self.root;
+        self.chainHolder.root = (NSString*)[self.strings objectAtIndex:number];
+        self.displayLabel.text = self.chainHolder.root;
         [self.strings removeObjectAtIndex:number];
         [self.actionButton setTitle:@"Send" forState:nil];
         return;
@@ -52,11 +53,11 @@
     if (self.responseField.text.length == 0)
         return;
     if ([self.actionButton.titleLabel.text isEqualToString:@"Send"]) {
-        self.response = [self.responseField text];
+        self.chainHolder.response = [self.responseField text];
         NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
-        [dict setObject:self.root forKey:@"root"];
-        [dict setObject:self.response forKey:@"response"];
-        
+        [dict setObject:self.chainHolder.root forKey:@"root"];
+        [dict setObject:self.chainHolder.response forKey:@"response"];
+
         NSMutableData *data = [[NSMutableData alloc] init];
         NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
         [archiver encodeObject:dict forKey:@"Dictionary"];
@@ -65,13 +66,16 @@
         [self.session sendDataToAllPeers:data withDataMode:GKSendDataUnreliable error:nil];
     }
     else if ([self.actionButton.titleLabel.text isEqualToString:@"Guess"]) {
-        NSLog(@"guess");
-        self.guess = self.responseField.text;
-        if ([self.guess isEqualToString:self.response]) {
+        self.chainHolder.guess = self.responseField.text;
+        if ([self.chainHolder isCorrectGuess]) {
             NSLog(@"wow");
             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"WOW!" message:@"You have guessed correctly" delegate:self cancelButtonTitle:@"Continue" otherButtonTitles:nil];
             
             [alert show];
+        }
+        else {
+            NSString* correctLetters = [self.chainHolder getCorrectLetters];
+            NSLog(correctLetters);
         }
     }
 }
@@ -130,9 +134,11 @@
     NSDictionary *myDictionary = [unarchiver decodeObjectForKey:@"Dictionary"];
     [unarchiver finishDecoding];
     
-    self.root = [myDictionary objectForKey:@"root"];
-    self.response = [myDictionary objectForKey:@"response"];
-    self.displayLabel.text = self.root;
+    NSLog(@"%@", myDictionary);
+    
+    self.chainHolder.root = [myDictionary objectForKey:@"root"];
+    self.chainHolder.response = [myDictionary objectForKey:@"response"];
+    self.displayLabel.text = self.chainHolder.root;
     
     [self.actionButton setHidden:NO];
     [self.responseField setHidden:NO];
@@ -141,12 +147,10 @@
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    self.root = self.guess;
-    self.displayLabel.text = self.root;
+    self.chainHolder.root = self.chainHolder.guess;
+    self.displayLabel.text = self.chainHolder.root;
     [self.actionButton setTitle:@"Send" forState:nil];
     self.responseField.text = @"";
-    self.guess = @"";
-    self.response = @"";
 }
 
 @end
