@@ -23,6 +23,8 @@
 		EF22FC9D164CC6C40023210E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF22FC9C164CC6C40023210E /* SecondViewController.m */; };
 		EF22FC9F164CC6C40023210E /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = EF22FC9E164CC6C40023210E /* second.png */; };
 		EF22FCA1164CC6C40023210E /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF22FCA0164CC6C40023210E /* second@2x.png */; };
+		EF22FCA8164CD3C30023210E /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = EF22FCA7164CD3C30023210E /* words.txt */; };
+		EF22FCAA164CD99D0023210E /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF22FCA9164CD99D0023210E /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		EF22FC9C164CC6C40023210E /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		EF22FC9E164CC6C40023210E /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		EF22FCA0164CC6C40023210E /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		EF22FCA7164CD3C30023210E /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
+		EF22FCA9164CD99D0023210E /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF22FCAA164CD99D0023210E /* GameKit.framework in Frameworks */,
 				EF22FC7A164CC6C40023210E /* UIKit.framework in Frameworks */,
 				EF22FC7C164CC6C40023210E /* Foundation.framework in Frameworks */,
 				EF22FC7E164CC6C40023210E /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +72,7 @@
 		EF22FC6A164CC6C40023210E = {
 			isa = PBXGroup;
 			children = (
+				EF22FCA9164CD99D0023210E /* GameKit.framework */,
 				EF22FC7F164CC6C40023210E /* Word Chain */,
 				EF22FC78164CC6C40023210E /* Frameworks */,
 				EF22FC76164CC6C40023210E /* Products */,
@@ -116,6 +122,7 @@
 				EF22FC81164CC6C40023210E /* Word Chain-Info.plist */,
 				EF22FC82164CC6C40023210E /* InfoPlist.strings */,
 				EF22FC85164CC6C40023210E /* main.m */,
+				EF22FCA7164CD3C30023210E /* words.txt */,
 				EF22FC87164CC6C40023210E /* Word Chain-Prefix.pch */,
 				EF22FC8B164CC6C40023210E /* Default.png */,
 				EF22FC8D164CC6C40023210E /* Default@2x.png */,
@@ -184,6 +191,7 @@
 				EF22FC9A164CC6C40023210E /* first@2x.png in Resources */,
 				EF22FC9F164CC6C40023210E /* second.png in Resources */,
 				EF22FCA1164CC6C40023210E /* second@2x.png in Resources */,
+				EF22FCA8164CD3C30023210E /* words.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
