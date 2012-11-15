@@ -10,9 +10,9 @@
 
 @implementation ChainHolder
 
-- (id) initChainWithRoot:(NSString *)root {
-    if (self = [super init]){
-        self.root = root;
+- (id) init {
+    if (self = [super init]) {
+        self.chain = [[NSMutableArray alloc] init];
     }
     return self;
 }
