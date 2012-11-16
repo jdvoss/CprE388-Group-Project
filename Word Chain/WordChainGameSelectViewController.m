@@ -29,8 +29,18 @@
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, 320, 400) style:UITableViewStyleGrouped];
     
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-    self.games = [defaults arrayForKey:@"games"];
+    self.games = [defaults objectForKey:@"games"];
     
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender { /*
+    if ([segue.identifier isEqualToString:@"wordChain"]) {
+        WordChainViewController* wcvc = (WordChainViewController*)[segue destinationViewController];
+        if (sender != nil)
+            wcvc.game = sender;
+        
+        [self presentViewController:wcvc animated:YES completion:nil]; 
+    } */
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,15 +58,23 @@
 
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-    cell.textLabel.text = (NSString*)[self.games objectAtIndex:indexPath.row];
+    cell.textLabel.text = [(Game*)[self.games objectAtIndex:indexPath.row] partner] ;
     return cell;
 }
 
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString* gameID = [tableView cellForRowAtIndexPath:indexPath].textLabel.text;
+    for (Game* game in self.games) {
+        if ([game.partner isEqualToString:gameID])
+            [self performSegueWithIdentifier:@"wordChain" sender:game];
+    }
+}
+
 - (IBAction)newGame:(UIBarButtonItem *)sender {
-    
+    [self performSegueWithIdentifier:@"wordChain" sender:nil];
 }
 
 - (IBAction)cancel:(UIBarButtonItem *)sender {
-    self presentViewController:<#(UIViewController *)#> animated:<#(BOOL)#> completion:<#^(void)completion#>
+    
 }
 @end

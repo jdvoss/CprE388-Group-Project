@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <GameKit/GameKit.h>
+#import "WordChainViewController.h"
 
 @interface WordChainGameSelectViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, GKPeerPickerControllerDelegate>
 

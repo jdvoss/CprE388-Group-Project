@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--First View Controller - First-->
+        <!--Word Chain View Controller - First-->
         <scene sceneID="11">
             <objects>
-                <viewController title="First" id="2" customClass="FirstViewController" sceneMemberID="viewController">
+                <viewController title="First" id="2" customClass="WordChainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="16">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,8 @@
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfc-Gx-vdW">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="73" id="BeY-Ql-M48"/>
+                                    <constraint firstAttribute="width" constant="72" id="XOV-0t-t90"/>
+                                    <constraint firstAttribute="height" constant="44" id="gvI-ji-Vse"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Start">
@@ -39,33 +40,84 @@
                             </button>
                             <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hbF-EX-0hI">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="138" id="csT-LP-Tb2"/>
+                                    <constraint firstAttribute="width" constant="138" id="an5-0q-gTo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="go"/>
                             </textField>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4Z-u2-gUS">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="eMG-OW-Ozo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Skip">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="skip:" destination="2" eventType="touchUpInside" id="R8R-Ik-L7f"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Glc-nA-1Oo">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="gameInfo:" destination="2" eventType="touchUpInside" id="VHY-fr-XUd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="v4Z-u2-gUS" secondAttribute="trailing" constant="80" id="Qry-5D-BNo"/>
                             <constraint firstAttribute="trailing" secondItem="20" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Qxj-1L-2Yh"/>
                             <constraint firstItem="hbF-EX-0hI" firstAttribute="top" secondItem="16" secondAttribute="top" constant="152" id="RX3-x8-Wom"/>
+                            <constraint firstItem="Glc-nA-1Oo" firstAttribute="top" secondItem="16" secondAttribute="top" constant="9" id="TFp-TQ-aB6"/>
                             <constraint firstItem="20" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ty9-wx-CyI"/>
+                            <constraint firstItem="jfc-Gx-vdW" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="80" id="Xh8-qk-MQ6"/>
                             <constraint firstItem="hbF-EX-0hI" firstAttribute="centerX" secondItem="20" secondAttribute="centerX" type="default" id="gmc-So-pM4"/>
+                            <constraint firstAttribute="trailing" secondItem="Glc-nA-1Oo" secondAttribute="trailing" constant="8" id="hvn-WK-vCx"/>
                             <constraint firstItem="jfc-Gx-vdW" firstAttribute="top" secondItem="16" secondAttribute="top" constant="28" id="mGi-ED-5n6"/>
+                            <constraint firstItem="jfc-Gx-vdW" firstAttribute="top" secondItem="v4Z-u2-gUS" secondAttribute="top" type="default" id="t2q-k4-eKy"/>
                             <constraint firstItem="20" firstAttribute="top" secondItem="16" secondAttribute="top" constant="92" id="uxH-fi-omW"/>
-                            <constraint firstItem="jfc-Gx-vdW" firstAttribute="centerX" secondItem="20" secondAttribute="centerX" type="default" id="x8S-ck-j4J"/>
+                            <constraint firstItem="v4Z-u2-gUS" firstAttribute="bottom" secondItem="jfc-Gx-vdW" secondAttribute="bottom" type="default" id="waJ-mW-z01"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="first" id="7"/>
                     <connections>
                         <outlet property="actionButton" destination="jfc-Gx-vdW" id="47M-hg-bCi"/>
                         <outlet property="displayLabel" destination="20" id="0QX-17-iZ1"/>
+                        <outlet property="gameInfoButton" destination="Glc-nA-1Oo" id="BmH-1W-Laz"/>
                         <outlet property="responseField" destination="hbF-EX-0hI" id="8vJ-Cq-Sex"/>
+                        <outlet property="skipButton" destination="v4Z-u2-gUS" id="E6s-bO-Qir"/>
+                        <segue destination="xsE-SU-IlI" kind="modal" identifier="gameInfo" modalTransitionStyle="crossDissolve" id="fVv-bo-md3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="965" y="1260"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bKO-zT-j0U">
+            <objects>
+                <viewController id="xsE-SU-IlI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eDa-Wh-UeA">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oyl-NT-51z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1393" y="1260"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -110,7 +162,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="b5T-0G-1Lv" kind="modal" id="egI-XM-dvB"/>
+                        <segue destination="b5T-0G-1Lv" kind="modal" identifier="launchWordChain" modalTransitionStyle="crossDissolve" id="egI-XM-dvB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eNp-zu-GEs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -150,7 +202,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="2" kind="modal" id="Wjf-ID-Nip"/>
+                        <segue destination="2" kind="modal" identifier="wordChain" modalTransitionStyle="crossDissolve" id="Wjf-ID-Nip"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRO-sK-VUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -324,44 +376,6 @@
     <resources>
         <image name="first" width="16" height="16"/>
     </resources>
-    <classes>
-        <class className="FirstViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="action:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="actionButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="displayLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="responseField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="GameDetailViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="opponentLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="scoreLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="whosTurnLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="GameSelectViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameSelectViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="launchTRex:" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SecondViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondViewController.h"/>
-        </class>
-        <class className="WordChainGameSelectViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WordChainGameSelectViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="action" name="newGame:" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

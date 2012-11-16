@@ -31,7 +31,7 @@
 		EF98430C1654B714001B68C5 /* WordChain.png in Resources */ = {isa = PBXBuildFile; fileRef = EF98430B1654B714001B68C5 /* WordChain.png */; };
 		EF98430F1654B7C4001B68C5 /* GameSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF98430E1654B7C4001B68C5 /* GameSelectViewController.m */; };
 		EF9843151654E3CE001B68C5 /* WordChainGameSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9843141654E3CE001B68C5 /* WordChainGameSelectViewController.m */; };
-		EF9843191654ECA3001B68C5 /* WordChainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9843181654ECA3001B68C5 /* WordChainViewController.m */; };
+		EF98431C1654EDBA001B68C5 /* WordChainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF98431B1654EDBA001B68C5 /* WordChainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,7 +70,8 @@
 		EF98430E1654B7C4001B68C5 /* GameSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSelectViewController.m; sourceTree = "<group>"; };
 		EF9843131654E3CE001B68C5 /* WordChainGameSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordChainGameSelectViewController.h; sourceTree = "<group>"; };
 		EF9843141654E3CE001B68C5 /* WordChainGameSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordChainGameSelectViewController.m; sourceTree = "<group>"; };
-		EF9843181654ECA3001B68C5 /* WordChainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordChainViewController.m; sourceTree = "<group>"; };
+		EF98431A1654EDBA001B68C5 /* WordChainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordChainViewController.h; sourceTree = "<group>"; };
+		EF98431B1654EDBA001B68C5 /* WordChainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordChainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +153,8 @@
 		EF8AD8FC1652297D005681A8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EF98431A1654EDBA001B68C5 /* WordChainViewController.h */,
+				EF98431B1654EDBA001B68C5 /* WordChainViewController.m */,
 				EF22FC94164CC6C40023210E /* FirstViewController.h */,
 				EF22FC95164CC6C40023210E /* FirstViewController.m */,
 				EF22FC9B164CC6C40023210E /* SecondViewController.h */,
@@ -162,7 +165,6 @@
 				EF98430E1654B7C4001B68C5 /* GameSelectViewController.m */,
 				EF9843131654E3CE001B68C5 /* WordChainGameSelectViewController.h */,
 				EF9843141654E3CE001B68C5 /* WordChainGameSelectViewController.m */,
-				EF9843181654ECA3001B68C5 /* WordChainViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -259,7 +261,7 @@
 				EF98430A1654A96C001B68C5 /* GameDetailViewController.m in Sources */,
 				EF98430F1654B7C4001B68C5 /* GameSelectViewController.m in Sources */,
 				EF9843151654E3CE001B68C5 /* WordChainGameSelectViewController.m in Sources */,
-				EF9843191654ECA3001B68C5 /* WordChainViewController.m in Sources */,
+				EF98431C1654EDBA001B68C5 /* WordChainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

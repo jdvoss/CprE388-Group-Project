@@ -10,4 +10,11 @@
 
 @implementation Game
 
+- (id) init {
+    if (self = [super init]) {
+        self.chainHolder = [[ChainHolder alloc] init];
+    }
+    return self;
+}
+
 @end
